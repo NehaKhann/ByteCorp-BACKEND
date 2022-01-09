@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "11f20a33-32e8-40be-9309-a58597775964",
+		"name": "bytecorp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add forms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"aboutForm\":\"Form2\",\r\n    \"questions\":[{\r\n    \"description\":\"How much you rate it? \",\r\n    \"options\":[\r\n        {\r\n            \"option\":\"50\"\r\n        },\r\n                {\r\n            \"option\":\"70\"\r\n        },\r\n                {\r\n            \"option\":\"90\"\r\n        }\r\n\r\n    ]\r\n    },\r\n    {\r\n    \"description\":\"How about the cost? \",\r\n    \"options\":[\r\n        {\r\n            \"option\":\"Cheap\"\r\n        },\r\n                {\r\n            \"option\":\"Moderate\"\r\n        },\r\n                {\r\n            \"option\":\"Expensive\"\r\n        }\r\n\r\n    ]\r\n    }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/forms"
+			},
+			"response": []
+		},
+		{
+			"name": "Get forms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/forms"
+			},
+			"response": []
+		},
+		{
+			"name": "get form my id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/forms/61d82832d0593d7ef21c4e4a"
+			},
+			"response": []
+		},
+		{
+			"name": "Creating user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test\",\r\n    \"email\":\"test@gmail.com\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/user"
+			},
+			"response": []
+		},
+		{
+			"name": "customer form response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"user_id\":\"61d8786bd7b1e0dffe85e2ad\",\r\n    \"answer\":[\"61d829eeebc24a2d3d003bb2\",\"61d829eeebc24a2d3d003bb7\"]\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/formsubmission/61d829eeebc24a2d3d003bb0"
+			},
+			"response": []
+		}
+	]
+}
